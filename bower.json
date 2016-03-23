@@ -1,0 +1,21 @@
+{
+  "name": "cosmo",
+  "description": "CosmoCSS: a beatiful base style for your awesome websites.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Feliciano Santana <fsfelicianosantana@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.0.0"
+  }
+}
