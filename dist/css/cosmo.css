@@ -1325,7 +1325,9 @@ th, td, caption {
 .input {
   position: relative;
   z-index: 1;
-  display: inline-block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 3px;
   max-width: 350px;
   width: calc(100% - 2em);
@@ -1335,7 +1337,6 @@ th, td, caption {
 .input__field {
   position: relative;
   display: block;
-  float: right;
   padding: 0.8em;
   width: 60%;
   border: none;
@@ -1369,13 +1370,16 @@ th, td, caption {
 }
 
 .input__label {
-  display: inline-block;
-  float: right;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 1em;
   width: 40%;
   color: #696969;
   font-weight: bold;
-  font-size: 70.25%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
@@ -1385,10 +1389,13 @@ th, td, caption {
   user-select: none;
 }
 
+.input--icon .input__label {
+  font-size: 70.25%;
+}
+
 .input__label-content {
   position: relative;
   display: block;
-  padding: 1.6em 0;
   width: 100%;
 }
 
@@ -1411,6 +1418,7 @@ th, td, caption {
   text-align: left;
   padding-left: 4.5em;
   pointer-events: none;
+  left: 0;
   transition: 0.3s all;
 }
 
