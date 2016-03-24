@@ -1242,6 +1242,10 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+input {
+  box-sizing: border-box;
+}
+
 a {
   position: relative;
   display: inline-block;
@@ -1342,7 +1346,7 @@ th, td, caption {
   border: none;
   border-radius: 0;
   background: #f0f0f0;
-  color: #aaa;
+  color: rgba(0, 0, 0, 0.65);
   font-weight: 400;
   -webkit-appearance: none;
   /* for box shadows to show on iOS */
@@ -1454,4 +1458,14 @@ th, td, caption {
 .input--filled .icon--input {
   transition: 0.3s all;
   color: #00aeef;
+}
+
+.invalid {
+  border: solid 2px #B21509;
+  background: rgba(204, 34, 20, 0.11);
+}
+
+.valid {
+  border: solid 2px #54B212;
+  background: rgba(104, 255, 0, 0.11);
 }
