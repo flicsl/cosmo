@@ -11,7 +11,10 @@
     "gulp-sass": "^2.2.0",
     "gulp-watch": "^4.3.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.3.4",
+    "gulp-postcss": "^6.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

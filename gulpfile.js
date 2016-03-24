@@ -5,6 +5,8 @@ var reload = browserSync.reload;
 var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
 var project = {
 	name: "cosmo"
@@ -30,6 +32,7 @@ gulp.task('sass', function () {
 				.pipe(sass({
 					outputStyle: 'expanded'
 				}))
+				.pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
 				.pipe(gulp.dest("./dist/css"))
 				.pipe(reload({
 					stream: true
