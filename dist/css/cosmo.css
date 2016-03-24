@@ -1318,3 +1318,223 @@ th, td, caption {
 .box-1200 {
   max-width: 1200px;
 }
+
+/**
+ * Inputs
+ */
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  max-width: 350px;
+  width: calc(100% - 2em);
+  vertical-align: top;
+}
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: 400;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+  outline: none;
+}
+
+.input--icon {
+  background: #fff;
+  overflow: hidden;
+  padding: 0.25em 0;
+}
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #696969;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+
+.icon {
+  color: #ddd;
+  font-size: 150%;
+}
+
+/* icon */
+.input--icon {
+  background: #fff;
+  overflow: hidden;
+}
+
+.input--icon::after {
+  content: '';
+  width: 1px;
+  position: absolute;
+  top: 0.5em;
+  bottom: 0.5em;
+  left: 2.5em;
+  background: #f0f0f0;
+  z-index: 100;
+}
+
+.input__field--icon {
+  background: transparent;
+  padding: 1.5em 1em 0.25em 3.15em;
+  width: 100%;
+  color: #00aeef;
+}
+
+.input__label--icon {
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  padding-left: 4.5em;
+  pointer-events: none;
+}
+
+.icon--icon {
+  width: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em 0 0 0.5em;
+}
+
+.input__label-content--icon {
+  padding: 1.7em 0;
+  display: inline-block;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.input__label-content--icon span {
+  display: inline-block;
+}
+
+.input__field--icon:focus + .input__label--icon .input__label-content--icon,
+.input--filled .input__label-content--icon {
+  -webkit-animation: anim-icon-1 0.3s forwards;
+  animation: anim-icon-1 0.3s forwards;
+}
+
+@-webkit-keyframes anim-icon-1 {
+  50% {
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    -webkit-transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+  }
+  100% {
+    color: #a3a3a3;
+    -webkit-transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+  }
+}
+
+@keyframes anim-icon-1 {
+  50% {
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    -webkit-transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+  }
+  100% {
+    color: #a3a3a3;
+    -webkit-transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+  }
+}
+
+.input__field--icon:focus + .input__label--icon .icon--icon,
+.input--filled .icon--icon {
+  -webkit-animation: anim-icon-2 0.3s forwards;
+  animation: anim-icon-2 0.3s forwards;
+}
+
+@-webkit-keyframes anim-icon-2 {
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.25% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.75% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #00aeef;
+  }
+}
+
+@keyframes anim-icon-2 {
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.25% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.75% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #00aeef;
+  }
+}

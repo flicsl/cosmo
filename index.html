@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmo.css HTML5 Test Page</title>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="dist/css/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="dist/css/cosmo.css">
   </head>
   <body>
@@ -276,6 +277,15 @@
           <form>
             <fieldset id="forms__input">
               <legend>Input fields</legend>
+              <p>
+                <span class="input input--icon">
+                  <input class="input__field input__field--icon" type="text" id="input-23">
+                  <label class="input__label input__label--icon" for="input-23">
+                    <i class="fa fa-fw fa-university icon icon--icon"></i>
+                    <span class="input__label-content input__label-content--icon">University name</span>
+                  </label>
+                </span>
+              </p>
               <p>
                 <label for="input__text">Text Input</label>
                 <input id="input__text" type="text" placeholder="Text Input">
